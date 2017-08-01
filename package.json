@@ -1,0 +1,34 @@
+{
+  "name": "electron-aurelia",
+  "version": "1.0.0",
+  "description": "Simple example of running Aurelia in Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "webpack",
+    "watch": "webpack --watch"
+  },
+  "author": "edseabolt@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "aurelia-bootstrapper": "^2.1.1",
+    "aurelia-webpack-plugin": "^2.0.0-rc.3",
+    "babel-core": "^7.0.0-alpha.17",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.4",
+    "electron": "^1.6.11",
+    "electron-reload": "^1.2.1",
+    "html-loader": "^0.5.0",
+    "html-webpack-plugin": "^2.30.1",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.25.0"
+  }
+}
