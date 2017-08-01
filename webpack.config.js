@@ -41,7 +41,7 @@ const config = {
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['env'],
+						presets: ['es2017'],
 						plugins: ['transform-runtime']
 					}
 				}

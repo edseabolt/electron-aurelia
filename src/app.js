@@ -1,5 +1,9 @@
+import fs from 'fs';
+
 export default class App {
-	constructor() {
-		this.message = 'Hello from Aurelia';
+	attached() {
+		fs.readFile('./message.txt', (err, data) => {
+			this.message = data.toString();
+		});
 	}
 }
