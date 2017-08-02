@@ -42,7 +42,7 @@ const config = {
 					loader: 'babel-loader',
 					options: {
 						presets: ['es2017'],
-						plugins: ['transform-runtime']
+						plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties']
 					}
 				}
 			}

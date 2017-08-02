@@ -4,5 +4,5 @@ export async function configure(aurelia) {
 		.developmentLogging();
 	
 	await aurelia.start();
-	aurelia.setRoot('app', document.body);
+	aurelia.setRoot();
 }
