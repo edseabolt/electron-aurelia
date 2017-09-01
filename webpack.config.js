@@ -5,7 +5,7 @@ const AureliaWebpackPlugin = require('aurelia-webpack-plugin');
 
 const config = {
 	target: 'electron-renderer',
-	entry: ['./src/main.scss', 'aurelia-bootstrapper'],
+	entry: ['./src/main.scss', 'font-awesome/scss/font-awesome.scss', 'aurelia-bootstrapper'],
 	output: {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist')
@@ -35,13 +35,17 @@ const config = {
 					{ loader: 'sass-loader' }
 				]
 			},
+      {
+        test: /\.(otf|eot|svg|ttf|woff|woff2)$/,
+        loader: 'url-loader'
+			},
 			{
 				test: /\.js$/,
 				exclude: /node_modules/,
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['es2017'],
+            presets: [['env', {"targets": {"node":"current"}}]],
 						plugins: ['transform-runtime', 'transform-decorators-legacy', 'transform-class-properties']
 					}
 				}
