@@ -7,7 +7,7 @@ const BrowserWindow = electron.BrowserWindow
 const path = require('path')
 const url = require('url')
 
-require('electron-reload')(__dirname, {
+require('electron-reload')('./dist', {
 	electron: path.join(__dirname, 'node_modules', '.bin', 'electron')
 });
 
